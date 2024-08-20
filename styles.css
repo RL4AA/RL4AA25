@@ -144,7 +144,7 @@ td {
   text-align: center;
   width: 1000px;
   height: 67px;
-  position: absolute;
+  /* position: absolute; */
   padding: 36px 0 0 0;
   top: 0px;
 }
