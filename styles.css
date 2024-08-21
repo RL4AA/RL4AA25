@@ -15,6 +15,17 @@
 
 @import url("https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab");
 
+:root {
+  --background-color-of-the-site: #fafafa;
+  --foreground-text-color-of-the-site: #505050;
+  --navy: #52739e;
+  --reddish: #b2132e;
+  --heading-color: #813c54;
+  --dark-goldenrod: #b8860b;
+  --shadow-color-of-the-site: #d0d0d0;
+  --shadow-color-of-the-title: #c0c0c0;
+}
+
 * {
   border: 0;
   font: inherit;
@@ -25,10 +36,10 @@
 }
 
 body {
-  background-color: #fafafa;
+  background-color: var(--background-color-of-the-site);
   background-size: cover;
   background-attachment: fixed;
-  color: #505050;
+  color: var(--foreground-text-color-of-the-site);
   text-align: left;
   font-family: "Roboto", sans-serif;
   font-size: 1em;
@@ -38,17 +49,17 @@ body {
 }
 
 a {
-  color: #b8860b;
+  color: var(--dark-goldenrod);
   text-decoration: none;
 }
 a.current {
-  color: #52739e;
+  color: var(--navy);
 }
 a.current:hover {
   color: #e82945;
 }
 a:hover {
-  color: #b2132e;
+  color: var(--reddish);
 }
 a:active {
   color: #e82945;
@@ -58,10 +69,10 @@ h2,
 h3,
 h4 {
   clear: left;
-  color: #813c54;
+  color: var(--heading-color);
   margin: 1.5em 0em 1em 0em;
   font-family: "Roboto Slab", serif;
-  text-shadow: 1px 1px 2px #d0d0d0;
+  text-shadow: 1px 1px 2px var(--shadow-color-of-the-site);
 }
 h1 {
   font-size: 2.67em;
@@ -85,7 +96,7 @@ p {
 li a,
 p a {
   text-decoration: underline;
-  text-decoration-color: #b8860b;
+  text-decoration-color: var(--dark-goldenrod);
 }
 ul {
   list-style: none;
@@ -139,8 +150,8 @@ td {
 }
 .top-left {
   font-size: 5.33em;
-  color: #505050;
-  background: #fafafa;
+  color: var(--foreground-text-color-of-the-site);
+  background: var(--background-color-of-the-site);
   text-align: center;
   width: 1000px;
   height: 67px;
@@ -164,15 +175,15 @@ td {
 
 /* Conference Title Logo */
 .title1 {
-  color: #b2132e;
-  text-shadow: 1px 1px 3px #c0c0c0;
+  color: var(--reddish);
+  text-shadow: 1px 1px 3px var(--shadow-color-of-the-title);
 }
 .title2 {
-  color: #52739e;
-  text-shadow: 1px 1px 3px #c0c0c0;
+  color: var(--navy);
+  text-shadow: 1px 1px 3px var(--shadow-color-of-the-title);
 }
 .year {
-  color: #505050;
+  color: var(--foreground-text-color-of-the-site);
   font-size: 0.67em;
   font-weight: lighter;
 }
@@ -211,7 +222,7 @@ td.room {
   width: 90%;
   vertical-align: bottom;
   font-size: 1.67em;
-  color: #52739e;
+  color: var(--navy);
   height: 32px;
 }
 td.date {
@@ -226,20 +237,20 @@ td.title {
   width: 90%;
   vertical-align: top;
   font-size: 1.5em;
-  color: #813c54;
+  color: var(--heading-color);
   height: 32px;
   font-family: "Roboto Slab", serif;
-  text-shadow: 1px 1px 2px #d0d0d0;
+  text-shadow: 1px 1px 2px var(--shadow-color-of-the-site);
 }
 td.title-special {
   padding: 4px 12px 4px 4px;
   width: 90%;
   vertical-align: top;
   font-size: 1.67em;
-  color: #52739e;
+  color: var(--navy);
   height: 32px;
   font-family: "Roboto Slab", serif;
-  text-shadow: 1px 1px 2px #d0d0d0;
+  text-shadow: 1px 1px 2px var(--shadow-color-of-the-site);
 }
 td.speaker {
   padding: 4px 12px 4px 4px;
@@ -339,7 +350,7 @@ a.call-to-action {
   cursor: pointer;
   width: 180px;
   margin-left: 50px;
-  box-shadow: 1px 1px 2px #d0d0d0;
+  box-shadow: 1px 1px 2px var(--shadow-color-of-the-site);
 }
 
 a.call-to-action:hover {
@@ -371,5 +382,23 @@ a.call-to-action:hover {
   }
   table.footer {
     font-size: 0.33em;
+  }
+}
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color-of-the-site: #202020;
+    --foreground-text-color-of-the-site: #fafafa;
+    --shadow-color-of-the-site: #000000;
+    --shadow-color-of-the-title: #000000;
+    --dark-goldenrod: #f2b51c;
+    --navy: #5a95e2;
+    --reddish: #f22144;
+    --heading-color: #c24772;
+  }
+  table.plenary {
+    background: #292929;
   }
 }
