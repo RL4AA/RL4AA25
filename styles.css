@@ -401,4 +401,7 @@ a.call-to-action:hover {
   table.plenary {
     background: #292929;
   }
+  img.switch-logo-dark-to-white {
+    filter: brightness(0) invert(1);
+  }
 }
